@@ -2,11 +2,12 @@ const API_BASE_URL = "https://lyrically-remix-rewrap.ngrok-free.dev";
 
 async function request(endpoint, options = {}) {
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+    ...options,
     headers: {
       "Content-Type": "application/json",
+      "ngrok-skip-browser-warning": "true",
       ...(options.headers || {}),
     },
-    ...options,
   });
 
   if (!response.ok) {
