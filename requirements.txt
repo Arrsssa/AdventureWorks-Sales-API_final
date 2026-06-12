@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pandas
+openpyxl
+scikit-learn
+joblib
+pydantic
+pytest
+httpx
+python-multipart
